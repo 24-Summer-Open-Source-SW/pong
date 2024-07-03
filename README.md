@@ -9,9 +9,9 @@
 - **김예지** : Member 3 
 - **홍수지** : Member 1
 
-#### Today’s Lab: Centralized Workflow
+### Today’s Lab: Centralized Workflow
 Integration-manager workflow:<br />
-• Preparation<br />
+#### Preparation<br />
 **Maintainer:**<br />
 • Create a Public Github repository<br />
 • Remember to add a Readme file<br />
@@ -25,7 +25,7 @@ Integration-manager workflow:<br />
 • Clone the repository; $cd to the created folder<br />
 
 Task assignment<br />
-#### 3 tasks<br />
+### 3 tasks<br />
 **Paddle movement**<br />
 • PaddleGUI.move_up() and move_down()<br />
 • PaddleGUI.__init__(): keys assignment for left and right<br />
