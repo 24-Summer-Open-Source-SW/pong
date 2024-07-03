@@ -4,10 +4,10 @@
 > **과제** :pong
 
 #### 👥 팀원
-- **유지희** : Leader
-- **김정주** : Member 2
-- **김예지** : Member 3 
-- **홍수지** : Member 1
+- **유지희** : Paddle movement
+- **김정주** : Manager
+- **김예지** : Score update when ball falls
+- **홍수지** : Ball movement when the wall or paddle
 
 #### Today’s Lab: Centralized Workflow
 Integration-manager workflow:<br />
