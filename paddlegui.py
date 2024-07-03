@@ -15,14 +15,14 @@ class PaddleGUI(Paddle):
         - move_down(): handles event when user presses DOWN key
         - update(): updates paddle position and score of the paddle
     """
-    def __init__(self, canvas, side="left"):
+    def __init__(self, canvas, side='left'):
         super().__init__(velocity=[0,0])
         self.canvas = canvas
         keys=[None, None]
         anchor = None
         if side == 'left':
             self.position = [0, HEIGHT//2-35]
-            keys[:] = ['<Up>', '<Down>']  # <-- TODO: change the keys for left side paddle
+            keys[:] = ['w', 's']  # <-- TODO: change the keys for left side paddle / '<Up>,<Down>'을 'w,s'로 수정함
             anchor = NW
 
         if side == "right":
@@ -36,11 +36,19 @@ class PaddleGUI(Paddle):
         self.canvas.bind_all(keys[1], self.move_down)
         self.score_label = self.canvas.create_text(self.position[0], 0, anchor=anchor, text=" Score: 0")
 
-    def move_up(self, event):  # <-- TODO: complete this function by updating the velocity or position appropriately
-        pass
+    def move_up(self, event):  # <-- TODO: complete this function by updating the velocity or position appropriately / 아래로 이동하게 수정
+        # pass
+        if self.position[1] > 0:
+            self.position[1] -= 20  # Move up by 20 pixels
+            self.update()
 
-    def move_down(self, event):  # <-- TODO: complete this function by updating the velocity or position appropriately
-        pass
+
+    def move_down(self, event):  # <-- TODO: complete this function by updating the velocity or position appropriately / 위로 이동하게 수정
+        # pass
+        if self.position[1] < HEIGHT - self.size[1]:
+            self.position[1] += 20  # Move down by 20 pixels
+            self.update()
+
 
     def update(self):
         super().update()
